@@ -16,7 +16,7 @@ Unlike enterprise HPC pipelines (which focus on distributed SLURM clusters or MP
 ---
 
 ## Architecture Overview
-BioTriton Lite operates on a hybrid orchestrator model:
+BioTriton operates on a hybrid orchestrator model:
 1. **Python Control Layer:** Manages sequence ingestion, VRAM limits, and kernel dispatch logic.
 2. **PyTorch Tensor Bridge:** Facilitates high-speed transfer of raw ASCII bytes over the PCIe bus directly to GPU memory.
 3. **OpenAI Triton Kernels:** Custom-compiled GPU kernels execute math-heavy primitives (hashing, reductions, wavefront DP) directly on the Streaming Multiprocessors (SMs).
@@ -28,7 +28,7 @@ BioTriton Lite operates on a hybrid orchestrator model:
 
 *Hardware Context: CPU: AMD Ryzen 7 7840HS | GPU: NVIDIA RTX 4050 (6GB VRAM)*
 
-| Operation | CPU Baseline | BioTriton Lite (GPU) | Speedup |
+| Operation | CPU Baseline | BioTriton (GPU) | Speedup |
 | :--- | :--- | :--- | :--- |
 | **K-mer Extraction (K=31)** | 7.830s | 0.075s | **~104x** |
 | **Hamming Distance (Fused)** | 6.938ms | 3.410ms | **~2x (over Unfused GPU)** |
@@ -46,7 +46,7 @@ BioTriton Lite operates on a hybrid orchestrator model:
 ---
 
 ## Current Scope
-BioTriton Lite is designed as a **single-node, local environment** for algorithmic research, education, and rapid prototyping. It serves as a proving ground for testing custom hardware-accelerated bioinformatics primitives before scaling them up to enterprise infrastructure.
+BioTriton is designed as a **single-node, local environment** for algorithmic research, education, and rapid prototyping. It serves as a proving ground for testing custom hardware-accelerated bioinformatics primitives before scaling them up to enterprise infrastructure.
 
 ---
 
