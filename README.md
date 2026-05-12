@@ -1,4 +1,4 @@
-# 🧬 BioTriton Lite
+# 🧬 BioTriton
 ### Triton-Powered GPU Bioinformatics Acceleration Framework
 
 BioTriton is a research-oriented, GPU-native bioinformatics framework built to accelerate foundational sequence computations using OpenAI Triton and PyTorch. 
