@@ -7,6 +7,15 @@ Unlike enterprise HPC pipelines (which focus on distributed SLURM clusters or MP
 
 ---
 
+## 🚀 Key Features
+
+* **Memory-Safe Sequence Batching:** Process massive sequences (e.g., full human chromosomes) on limited VRAM (≤ 6GB) using mathematically safe overlapping window generators.
+* **Deep Systems Optimization (Kernel Fusion):** Bypass PCIe VRAM bottlenecks. Execute operations like Hamming Distance calculation directly in the streaming multiprocessor (SM) L1 cache/registers.
+* **Anti-Diagonal Wavefront Parallelism:** Needleman-Wunsch dynamic programming matrices are notorious for serializing GPUs. This engine forces threads to traverse the DP matrix diagonally, unlocking massive parallel speedups without race conditions.
+* **Bitwise De Bruijn Graphs:** Extract $K$-mer nodes and edges for genome assembly instantly using hyper-fast Base-4 integer bit-shifting instead of slow string parsing.
+
+---
+
 ## ⚡ Performance Benchmarks
 
 *Hardware Context: CPU: AMD Ryzen 7 7840HS | GPU: NVIDIA RTX 4050 (6GB VRAM)*
