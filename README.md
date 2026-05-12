@@ -64,3 +64,6 @@ BioTriton is designed as a **single-node, local environment** for algorithmic re
 * No distributed execution support.
 * No production-scale genome assembly orchestration.
 * Benchmarked primarily on synthetic and small biological datasets.
+
+## License
+Distributed under the MIT License. See LICENSE for more information.
