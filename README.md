@@ -15,6 +15,15 @@ Unlike enterprise HPC pipelines (which focus on distributed SLURM clusters or MP
 
 ---
 
+## Architecture Overview
+BioTriton Lite operates on a hybrid orchestrator model:
+1. **Python Control Layer:** Manages sequence ingestion, VRAM limits, and kernel dispatch logic.
+2. **PyTorch Tensor Bridge:** Facilitates high-speed transfer of raw ASCII bytes over the PCIe bus directly to GPU memory.
+3. **OpenAI Triton Kernels:** Custom-compiled GPU kernels execute math-heavy primitives (hashing, reductions, wavefront DP) directly on the Streaming Multiprocessors (SMs).
+4. **Visualization Engine:** Decodes integer tensors back to sequence strings for rendering via NetworkX and Matplotlib.
+
+---
+
 ## ⚡ Performance Benchmarks
 
 *Hardware Context: CPU: AMD Ryzen 7 7840HS | GPU: NVIDIA RTX 4050 (6GB VRAM)*
