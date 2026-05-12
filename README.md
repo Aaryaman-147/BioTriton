@@ -7,7 +7,7 @@ Unlike enterprise HPC pipelines (which focus on distributed SLURM clusters or MP
 
 ---
 
-## Key Features
+## 🛠️ Key Features
 * **Memory-Safe Sequence Batching:** Processes massive DNA sequences on limited VRAM by automatically splitting them into overlapping chunks, ensuring no $K$-mers are destroyed at chunk boundaries.
 * **Kernel Fusion Optimization:** Bypasses PCIe bandwidth bottlenecks by fusing sequence encoding directly into computational kernels, performing math entirely within the GPU's L1 cache.
 * **Wavefront Dynamic Programming:** Solves the notorious GPU serialization problem in Sequence Alignment by forcing thread execution across anti-diagonals, computing millions of cells simultaneously without race conditions.
@@ -15,7 +15,7 @@ Unlike enterprise HPC pipelines (which focus on distributed SLURM clusters or MP
 
 ---
 
-## Architecture Overview
+## 🏗️ Architecture Overview
 BioTriton operates on a hybrid orchestrator model:
 1. **Python Control Layer:** Manages sequence ingestion, VRAM limits, and kernel dispatch logic.
 2. **PyTorch Tensor Bridge:** Facilitates high-speed transfer of raw ASCII bytes over the PCIe bus directly to GPU memory.
