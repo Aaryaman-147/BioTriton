@@ -38,26 +38,26 @@ BioTriton operates on a hybrid orchestrator model:
 
 ---
 
-## Technical Highlights
+## ⚙️ Technical Highlights
 * **Beating the Garbage Collector:** Transitioned from Python string parsing to raw byte array transfers to avoid memory overhead bottlenecks.
 * **Algorithmic Parallelization:** Implemented a diagonal traversal mechanism for $O(N^2)$ dynamic programming matrices, effectively parallelizing Needleman-Wunsch algorithm execution.
 * **Bitwise Representation:** Mapped genomic data (A, C, G, T) to 2-bit integers, allowing sequence extraction and graph overlap logic to be resolved in single clock cycles using bitwise `>>` and `&` operators.
 
 ---
 
-## Current Scope
+## 🎯 Current Scope
 BioTriton is designed as a **single-node, local environment** for algorithmic research, education, and rapid prototyping. It serves as a proving ground for testing custom hardware-accelerated bioinformatics primitives before scaling them up to enterprise infrastructure.
 
 ---
 
-## Future Roadmap
+## 🛣️ Future Roadmap
 * **Eulerian Path Assembly:** Implement traversal algorithms to stitch De Bruijn graph components back into full contiguous sequences (contigs).
 * **Block-Level Wavefronts:** Move DP diagonal orchestration entirely into Triton using block-level synchronization to handle ultra-massive matrices.
 * **Heuristic Alignment Search:** Introduce seed-and-extend functionality (similar to BLAST) to rapidly query large sequence databases.
 
 ---
 
-## Current Limitations
+## ⚠️ Current Limitations
 * Optimized exclusively for single-GPU CUDA systems.
 * Alignment kernels currently target moderate matrix sizes.
 * Graph infrastructure is experimental.
